@@ -696,16 +696,13 @@ h2.article-head {
   background: #f17c67;
 }
 #tag-cloud .tag1 {
-  background: #c63;
-}
-#tag-cloud .tag2 {
   background: #ee9572;
 }
-#tag-cloud .tag3 {
+#tag-cloud .tag2 {
   background: #f93;
 }
-#tag-cloud .tag4 {
-  background: #6cf;
+#tag-cloud .tag3 {
+  background: #f66;
 }
 .tag-list {
   margin-left: 1em;
