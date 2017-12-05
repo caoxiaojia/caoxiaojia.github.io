@@ -683,7 +683,6 @@ h2.article-head {
   line-height: 28px;
   margin: 0 4px;
   margin-bottom: 8px;
-  background: #63a35c;
   display: inline-block;
   border-radius: 4px;
   padding: 0 10px;
@@ -691,16 +690,22 @@ h2.article-head {
   transition: background 0.5s;
 }
 #tag-cloud a:hover {
-  background: #0085a1;
+  background: #42b983;
 }
 #tag-cloud .tag0 {
-  background: #bbe;
+  background: #f17c67;
 }
 #tag-cloud .tag1 {
-  background: #9cb2e1;
+  background: #c63;
 }
 #tag-cloud .tag2 {
-  background-color: rgba(0,133,161,0.8);
+  background: #ee9572;
+}
+#tag-cloud .tag3 {
+  background: #f93;
+}
+#tag-cloud .tag4 {
+  background: #6cf;
 }
 .tag-list {
   margin-left: 1em;
