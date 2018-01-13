@@ -16,17 +16,13 @@
   <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
   <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/plugins/gitment.css">
+
   <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
   <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script>
   <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <script src="/js/qrious.js"></script>
-<script src="/js/gitment.js"></script>
+
 </head>
-<div class="wechat-share">
-  <img src="/css/images/logo.png" />
-</div>
+
 
   <body>
     <header class="header fixed-header">
@@ -130,15 +126,9 @@
       </div>
     
     <!-- Tags END -->
-    <!-- 打赏 START -->
-    
-    <!-- 打赏 END -->
-    <!-- 二维码 START -->
-    
-    <!-- 二维码 END -->
-    
-      <!-- No Comment -->
-    
+
+
+
   </article>
   <!-- Article END -->
   <!-- Catalog START -->
@@ -200,32 +190,7 @@
       value: document.location.href
     });
 
-    // gitment
-    var gitmentConfig = "";
-    if (gitmentConfig !== 'undefined') {
-      var gitment = new Gitment({
-        id: "谁不是一边娶妻生子，一边死在路上",
-        owner: "",
-        repo: "",
-        oauth: {
-          client_id: "",
-          client_secret: ""
-        },
-        theme: {
-          render(state, instance) {
-            const container = document.createElement('div')
-            container.lang = "en-US"
-            container.className = 'gitment-container gitment-root-container'
-            container.appendChild(instance.renderHeader(state, instance))
-            container.appendChild(instance.renderEditor(state, instance))
-            container.appendChild(instance.renderComments(state, instance))
-            container.appendChild(instance.renderFooter(state, instance))
-            return container;
-          }
-        }
-      })
-      gitment.render(document.getElementById('comments'))
-    }
+    
   })();
 </script>
 
