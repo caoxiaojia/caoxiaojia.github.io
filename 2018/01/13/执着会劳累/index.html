@@ -114,7 +114,9 @@
     <!-- 打赏 START -->
     
     <!-- 打赏 END -->
-  
+    <!-- 二维码 START -->
+    
+    <!-- 二维码 END -->
     
       <!-- No Comment -->
     
@@ -173,7 +175,12 @@
       }
     })
 
-  
+    // qrcode
+    var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    });
+
     // gitment
     var gitmentConfig = "";
     if (gitmentConfig !== 'undefined') {
