@@ -149,6 +149,7 @@ h2.article-head {
 @media screen and (max-width: 480px) {
   #article-banner h2 {
     font-size: 2em;
+    margin-top: 1em;
   }
 }
 #article-banner .post-date {
