@@ -1,5 +1,5 @@
 (function ($) {
-  console.log('©2017-2018 Cao Xiaojia. | ++')
+  console.log('© 2017-2018 Cao Xiaojia. All Rights Reserved.')
   var app = $('.app-body')
   var header = $('.header')
   var banner = document.getElementById('article-banner') || false
