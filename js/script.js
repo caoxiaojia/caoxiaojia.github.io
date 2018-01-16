@@ -36,7 +36,6 @@
   }
 
   $('.menu').on('click', function () {
-	console.log(111)
     if (!header.hasClass('fixed-header') || isOpen) {
       header.toggleClass('fixed-header')
       isOpen = !isOpen
