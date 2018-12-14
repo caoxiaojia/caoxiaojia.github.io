@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="">
+  <meta name="keyword" content="">
+  
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  
+  <title>
+    
+      ++
+    
+  </title>
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script> -->
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+</head>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>++</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2></h2>
+  <p class="post-date">2018-12-14</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><h1 id="收款二维码合并"><a href="#收款二维码合并" class="headerlink" title="收款二维码合并"></a>收款二维码合并</h1><p>萌新通道-&gt;<a href="#给第一次使用-github-的同学的教程">😉</a><br>提示:我使用了腾讯云的对象存储,提升访问速度,所以请自行将路径进行替换,不懂的同学可以发email给我,也可以在酷安私聊,我会尽量解决的,懒得写README了 :(</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>扫描二维码后跳转到此页面，然后根据 UA 判断具体平台。<br>支付宝为:AlipayClient<br>微信为:MicroMessenger<br>然后根据平台进行跳转，支付宝可以直接跳转到收款链接，而微信只能跳转到二维码进行付款。<br>同理可以添加其他平台的支付方式。  </p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="1-更换支付宝收款链接"><a href="#1-更换支付宝收款链接" class="headerlink" title="1.更换支付宝收款链接"></a>1.更换支付宝收款链接</h3><p>保存支付宝收款二维码，使用二维码识别软件进行识别，得到链接。<br><strong>得到的链接是大写的，不要进行任何处理或转换成小写</strong><br>然后将 index.html 中的变量 alipayURL 改为自己的支付宝收款链接。</p>
+<h3 id="2-更换微信二维码"><a href="#2-更换微信二维码" class="headerlink" title="2.更换微信二维码"></a>2.更换微信二维码</h3><p>保存微信收款二维码，放到 static/ 文件夹中，并命名为 wechat.png  </p>
+<h3 id="3-添加-QQ-二维码-可选项"><a href="#3-添加-QQ-二维码-可选项" class="headerlink" title="3.添加 QQ 二维码(可选项)"></a>3.添加 QQ 二维码(可选项)</h3><p>将 QQ 收款二维码放到 static/ 文件夹中,并命名为 qq.png<br>将 index.html 中的 qqSwitch 改为 true(相应地,不使用的同学请将其改为 false)   </p>
+<h3 id="4-添加-TIM-二维码-可选项"><a href="#4-添加-TIM-二维码-可选项" class="headerlink" title="4.添加 TIM 二维码(可选项)"></a>4.添加 TIM 二维码(可选项)</h3><p>将 TIM 收款二维码放到 static/ 文件夹中,并命名为 tim.png<br>将 index.html 中的 timSwitch 改为 true(相应地,不使用的同学请将其改为 false)   </p>
+<h3 id="3-设置为-Github-Pages"><a href="#3-设置为-Github-Pages" class="headerlink" title="3.设置为 Github Pages"></a>3.设置为 Github Pages</h3><p>选择 Settings –&gt; GitHub Pages 设置为 Github Pages<br><strong>如果没有通过 ICP 备案的域名建议不要使用自定义域名，会被微信拦截</strong><br>设置成功后得到链接，使用链接生成二维码即可。   </p>
+<h2 id="给第一次使用-Github-的同学的教程。"><a href="#给第一次使用-Github-的同学的教程。" class="headerlink" title="给第一次使用 Github 的同学的教程。"></a>给第一次使用 Github 的同学的教程。</h2><p><strong>(建议 PC 端浏览器打开，使用手机浏览器的同学请点击页面右下角的”Desktop version”切换到桌面版)</strong></p>
+<h3 id="1-注册并登录-Github-帐号"><a href="#1-注册并登录-Github-帐号" class="headerlink" title="1.注册并登录 Github 帐号"></a>1.注册并登录 Github 帐号</h3><p>Sign up + Sign in</p>
+<h3 id="2-Fork"><a href="#2-Fork" class="headerlink" title="2.Fork"></a>2.Fork</h3><p>点击页面右上角的 Fork 并等待其完成</p>
+<h3 id="3-配置"><a href="#3-配置" class="headerlink" title="3.配置"></a>3.配置</h3><p><a href="#配置">同上</a>   </p>
+<p>ps.作为一名后端,写的很烂,请多多包涵(好多东西都是现学的…),欢迎 pr 或 issue.   </p>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    // var url = 'http://caoxiaojia.com/pay/README.html';
+    // var banner = ''
+    // if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      // $('#article-banner').css({
+        // 'background-image': 'url(' + banner + ')'
+      // })
+    // } else {
+      // $('#article-banner').geopattern(url)
+    // }
+    // $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    /* var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    }); */
+
+    
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    <!-- span class="fa fa-instagram"></span> <a href="https://www.instagram.com/hellotsao/">Instagram</a> -->
+	<span class="fa fa-envelope-o"></span> <a href="mailto:tsao@188.com">tsao@188.com</a><br>
+	<span class="fa fa-copyright"></span> 2017-2018 Cao Xiaojia. All Rights Reserved.
+	<!-- 微博<span class="fa fa-weibo"></span> <a href="https://weibo.com/xoxocxj?profile_ftype=1&is_all=1#_0">Weibo</a> -->
+	<!-- 知乎<span class="fa fa-question-circle-o"></span> <a href="https://www.zhihu.com/people/hellocxj/answers">Zhihu</a> -->
+	</p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script src="/js/script.js"></script>
+<script>
+  var hasLine = 'true';
+
+   async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+	$('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+   })
+  /* async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  }) */
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="">
+  <meta name="keyword" content="">
+  
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+  
+  <title>
+    
+      ++
+    
+  </title>
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">
+  <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/tomorrow.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <!-- <script src="//cdn.bootcss.com/geopattern/1.2.3/js/geopattern.min.js"></script> -->
+  <script src="//cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
+</head>
+
+  <body>
+    <header class="header fixed-header">
+  <div class="header-container">
+    <a class="home-link" href="/">
+      <div class="logo"></div>
+      <span>++</span>
+    </a>
+    <ul class="right-list">
+      
+        <li class="list-item">
+          
+            <a href="/" class="item-link">Home</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/tags/" class="item-link">Tags</a>
+          
+        </li>
+      
+        <li class="list-item">
+          
+            <a href="/archives/" class="item-link">Archives</a>
+          
+        </li>
+      
+    </ul>
+    <div class="menu">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </div>
+    <div class="menu-mask">
+      <ul class="menu-list">
+        
+          <li class="menu-item">
+            
+              <a href="/" class="menu-link">Home</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/tags/" class="menu-link">Tags</a>
+            
+          </li>
+        
+          <li class="menu-item">
+            
+              <a href="/archives/" class="menu-link">Archives</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</header>
+
+    <div id="article-banner">
+  <h2></h2>
+  <p class="post-date">2018-12-14</p>
+  <div class="arrow-down">
+    <a href="javascript:;"></a>
+  </div>
+</div>
+<main class="app-body flex-box">
+  <!-- Article START -->
+  <article class="post-article">
+    <section class="markdown-content"><!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title id="title">转账跳转中......</title>
+ </head>
+ <body>
+  <script>
+  function getUA(){
+   return navigator.userAgent;
+  }
+
+  alipayURL="https://qr.alipay.com/tsx05591df9x7ht7ihudd34";
+  wechat = "MicroMessenger";
+  alipay = "AlipayClient";
+  qqBrowser = "MQQBrowser"
+  userAgent = getUA();
+  //是否使用 QQ 或 TIM 收款开关
+  qqSwitch = false;
+  timSwitch = false;
+
+  if (userAgent.indexOf(wechat) != -1){
+   //微信
+   window.location.href="wechat.html"
+  }else if (userAgent.indexOf(alipay) != -1){
+   //支付宝
+   //(还是支付宝最友好)
+   window.location.href=alipayURL;
+  }else if (userAgent.indexOf(qqBrowser) != -1){
+    //QQ或TIM
+    //辣鸡tx,QQ和TIM收款码居然不通用?
+    if (timSwitch && userAgent.indexOf("TIM") != -1){
+      //TIM 
+      window.location.href="tim.html"
+    }else if (qqSwitch){
+      //QQ
+      window.location.href="qq.html"
+    }
+  }else{
+   alert("无法识别的客户端！");
+  }
+</script>
+  <div id="container">
+   <h1>详细信息</h1>
+   <h3>如果遇到了问题，请将此页面截屏发送给开发者</h3>
+   <p>邮箱:senventise@gmail.com</p>
+   <div id="ua"><p>UA:</p></div> 
+   <duv id="link"><p>URL:</p></duv></div>
+   <p>版本:2.2</p>
+   <script>
+    document.getElementById("link").innerHTML = ("URL:"+ window.location.href);
+    document.getElementById("ua").innerHTML = ("UA:" + navigator.userAgent);
+    document.getElementById("title").innerHTML = "错误！";
+   </script>
+  
+ </body>
+</html>
+</section>
+    <!-- Tags START -->
+    
+    <!-- Tags END -->
+  </article>
+  <!-- Article END -->
+  <!-- Catalog START -->
+  
+  <!-- Catalog END -->
+</main>
+
+<script>
+  (function () {
+    // var url = 'http://caoxiaojia.com/pay/index.html';
+    // var banner = ''
+    // if (banner !== '' && banner !== 'undefined' && banner !== 'null') {
+      // $('#article-banner').css({
+        // 'background-image': 'url(' + banner + ')'
+      // })
+    // } else {
+      // $('#article-banner').geopattern(url)
+    // }
+    // $('.header').removeClass('fixed-header')
+
+     // error image
+    $(".markdown-content img").on('error', function() {
+      $(this).attr('src', 'http://file.muyutech.com/error-img.png')
+      $(this).css({
+        'cursor': 'default'
+      })
+    })
+
+    // zoom image
+    $(".markdown-content img").on('click', function() {
+      var src = $(this).attr('src')
+      if (src !== 'http://file.muyutech.com/error-img.png') {
+        var imageW = $(this).width()
+        var imageH = $(this).height()
+        
+        var zoom = ($(window).width() * 0.95 / imageW).toFixed(2)
+        zoom = zoom < 1 ? 1 : zoom
+        zoom = zoom > 2 ? 2 : zoom
+        var transY = (($(window).height() - imageH) / 2).toFixed(2)
+
+        $('body').append('<div class="image-view-wrap"><div class="image-view-inner"><img src="'+ src +'" /></div></div>')
+        $('.image-view-wrap').addClass('wrap-active')
+        $('.image-view-wrap img').css({
+          'width': `${imageW}`,
+          'transform': `translate3d(0, ${transY}px, 0) scale3d(${zoom}, ${zoom}, 1)`
+        })
+        $('html').css('overflow', 'hidden')
+
+        $('.image-view-wrap').on('click', function() {
+          $(this).remove()
+          $('html').attr('style', '')
+        })
+      }
+    })
+
+    // qrcode
+    /* var qr = new QRious({
+      element: document.getElementById('share-qrcode'),
+      value: document.location.href
+    }); */
+
+    
+  })();
+</script>
+
+    <div class="scroll-top">
+  <span class="arrow-icon"></span>
+</div>
+    <footer class="app-footer">
+  <p class="copyright">
+    <!-- span class="fa fa-instagram"></span> <a href="https://www.instagram.com/hellotsao/">Instagram</a> -->
+	<span class="fa fa-envelope-o"></span> <a href="mailto:tsao@188.com">tsao@188.com</a><br>
+	<span class="fa fa-copyright"></span> 2017-2018 Cao Xiaojia. All Rights Reserved.
+	<!-- 微博<span class="fa fa-weibo"></span> <a href="https://weibo.com/xoxocxj?profile_ftype=1&is_all=1#_0">Weibo</a> -->
+	<!-- 知乎<span class="fa fa-question-circle-o"></span> <a href="https://www.zhihu.com/people/hellocxj/answers">Zhihu</a> -->
+	</p>
+</footer>
+
+<script>
+  function async(u, c) {
+    var d = document, t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+    s.parentNode.insertBefore(o, s);
+  }
+</script>
+<script>
+  async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+    FastClick.attach(document.body);
+  })
+</script>
+
+<script src="/js/script.js"></script>
+<script>
+  var hasLine = 'true';
+
+   async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+	$('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+   })
+  /* async("//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js", function(){
+    $('figure pre').each(function(i, block) {
+      var figure = $(this).parents('figure');
+      if (hasLine == 'false') {
+        figure.find('.gutter').hide();
+      }
+      var lang = figure.attr('class').split(' ')[1] || 'code';
+      var codeHtml = $(this).html();
+      var codeTag = document.createElement('code');
+      codeTag.className = lang;
+      codeTag.innerHTML = codeHtml;
+      $(this).attr('class', '').empty().html(codeTag);
+      figure.attr('data-lang', lang.toUpperCase());
+      hljs.highlightBlock(block);
+    });
+  }) */
+</script>
+
+  </body>
+</html>
